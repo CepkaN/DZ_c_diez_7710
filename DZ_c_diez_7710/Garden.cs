@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace DZ_c_diez_7710
 {
-    internal class Garden
+    public class Garden
     {
         public List<Flower> Flowers { get; set; }
         public Garden() { Flowers= new List<Flower>(); }
@@ -27,17 +27,18 @@ namespace DZ_c_diez_7710
         public void FFF()
         {
             var d = Flowers.Where(s => s.Altezza >= 50).Select(s => s);
-            var f=Flowers.OrderBy(s=>s.Salute).Select(s=>s);
+            //var f=Flowers.OrderBy(s=>s.Salute).Select(s=>s);
+           
             string strJ = "C:\\Users\\User\\Desktop\\C#\\DZ_c_diez_7710\\DZ_c_diez_7710\\aaa.json";
             string json1 = File.ReadAllText(strJ);
             Console.WriteLine(json1);
             string strXML = "C:\\Users\\User\\Desktop\\C#\\DZ_c_diez_7710\\DZ_c_diez_7710\\bbb.xml";
             string json = JsonConvert.SerializeObject(d);
             System.IO.File.WriteAllText(strJ, json);
-            XmlSerializer xml1 = new XmlSerializer(typeof(Flower));
+            XmlSerializer xml1 = new XmlSerializer(typeof(List<Flower>));
             using (var fileStream1 = new FileStream(strXML, FileMode.OpenOrCreate))
             {
-                xml1.Serialize(fileStream1, f);
+                xml1.Serialize(fileStream1, Flowers);
 
                 Console.WriteLine("запись");
             }

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace DZ_c_diez_7710
 {
     public delegate void Action();
-    internal class Flower:IFlower
+    public class Flower:IFlower
     {
         public string NomeFlower { get; set; }
         public double Altezza { get; set; }

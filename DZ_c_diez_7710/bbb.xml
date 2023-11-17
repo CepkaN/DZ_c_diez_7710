@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfFlower xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Flower>
+    <NomeFlower> Цветок 1 </NomeFlower>
+    <Altezza>32.3</Altezza>
+    <Salute>32</Salute>
+  </Flower>
+  <Flower>
+    <NomeFlower> Цветок 2 </NomeFlower>
+    <Altezza>101</Altezza>
+    <Salute>39</Salute>
+  </Flower>
+  <Flower>
+    <NomeFlower> Цветок 3 </NomeFlower>
+    <Altezza>77.3</Altezza>
+    <Salute>88</Salute>
+  </Flower>
+  <Flower>
+    <NomeFlower> Цветок 4 </NomeFlower>
+    <Altezza>12</Altezza>
+    <Salute>50</Salute>
+  </Flower>
+</ArrayOfFlower>
